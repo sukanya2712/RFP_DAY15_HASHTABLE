@@ -1,7 +1,9 @@
 public class HashLinkedList<K,V> {
+
     HashNode<K, V> head;
     HashNode<K, V> tail;
 
+    //uc1
     public void push(K key, V value) {
         HashNode<K, V> newNode = new HashNode<>(key, value);
         if (head == null) {
