@@ -33,6 +33,12 @@ public class HashTable<K,V> {
         }
     }
 
+    public boolean remove(K key){
+        int index= getIndex(key);
+        HashLinkedList<K, V> myLinkedList = bucketArray.get(index);
+        return (myLinkedList.delete(key));
+    }
+
     public V get(K key) {
         int index = getIndex(key);
         HashLinkedList<K, V> myLinkedList = bucketArray.get(index);
